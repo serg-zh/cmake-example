@@ -11,8 +11,8 @@ ExternalProject_Add(libpcisrc
     INSTALL_COMMAND ""
 )
 
-add_library(libpci STATIC IMPORTED GLOBAL)
-set_target_properties(libpci PROPERTIES IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/lib/libpci.a)
-set_target_properties(libpci PROPERTIES INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_BINARY_DIR}/include)
+add_library(PkgConfig::libpci STATIC IMPORTED GLOBAL)
+set_target_properties(PkgConfig::libpci PROPERTIES IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/lib/libpci.a)
+set_target_properties(PkgConfig::libpci PROPERTIES INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_BINARY_DIR}/include)
 
-add_dependencies(libpci libpcisrc)
+add_dependencies(PkgConfig::libpci libpcisrc)
