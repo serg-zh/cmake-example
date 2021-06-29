@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "cmake configure",
+			"command": "cmake",
+			"args": [
+				"-B",
+				"build",
+				"-DCMAKE_VERBOSE_MAKEFILE=ON"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+		},
+		{
+			"type": "shell",
+			"label": "cmake build",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"build",
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+		}
+	]
+}
