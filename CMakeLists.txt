@@ -9,8 +9,5 @@ if(NOT libpci_FOUND)
     add_subdirectory(libpci)
 endif()
 
-add_subdirectory(liblib)
-
 add_executable(hello src/hello.c)
-
-target_link_libraries(hello PUBLIC PkgConfig::libpci liblib)
+target_link_libraries(hello PUBLIC PkgConfig::libpci)
